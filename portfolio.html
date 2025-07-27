@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Dobhal - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for general text, and a more display-oriented font for headings if desired -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for vibrant colors, aesthetic touches, and button effects */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Slate 950 - very dark */
+            color: #E2E8F0; /* Slate 200 - light text for contrast */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #CBD5E1; /* Slate 300 for headings */
+        }
+
+        /* Accent colors */
+        .text-accent-teal { color: #2DD4BF; } /* Teal 400 */
+        .text-accent-purple { color: #A78BFA; } /* Violet 400 */
+        .bg-accent-indigo { background-color: #6366F1; } /* Indigo 500 */
+        .border-accent-indigo { border-color: #6366F1; }
+
+        /* General section padding */
+        section {
+            padding: 6rem 1rem; /* py-24 px-4 */
+        }
+
+        /* Navigation link hover effect */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: #2DD4BF; /* Teal 400 */
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Button hover effects */
+        .btn-primary {
+            background-color: #6366F1; /* Indigo 500 */
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px; /* Full rounded */
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4); /* Indigo shadow */
+        }
+        .btn-primary:hover {
+            background-color: #4F46E5; /* Indigo 600 */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #2DD4BF; /* Teal 400 */
+            border: 2px solid #2DD4BF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #2DD4BF;
+            color: #0F172A; /* Dark background on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 14px rgba(45, 212, 191, 0.4); /* Teal shadow */
+        }
+
+        /* Project card hover effect */
+        .project-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Scrollbar styling for aesthetic touch */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1E293B; /* Darker slate */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4A5568; /* Grayish blue */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748B; /* Lighter gray */
+        }
+
+        /* Mobile menu specific styles */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%); /* Hidden by default */
+        }
+        .mobile-menu.active {
+            transform: translateX(0); /* Visible */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-slate-900 bg-opacity-90 backdrop-blur-sm fixed w-full z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-extrabold text-accent-teal">AyushDobhal.dev</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Home</a>
+                <a href="#about" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">About</a>
+                <a href="#skills" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Skills</a>
+                <a href="#experience" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Experience</a>
+                <a href="#projects" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Projects</a>
+                <a href="#contact" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-200 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-slate-800 z-50 shadow-xl md:hidden flex flex-col items-center pt-20 space-y-6">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-slate-200 text-3xl focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="home">Home</a>
+        <a href="#about" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="about">About</a>
+        <a href="#skills" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="skills">Skills</a>
+        <a href="#experience" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="experience">Experience</a>
+        <a href="#projects" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="projects">Projects</a>
+        <a href="#contact" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="contact">Contact</a>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden">
+        <!-- Background gradient/blob for aesthetic -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 opacity-70"></div>
+        <div class="absolute w-80 h-80 bg-accent-teal rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob top-1/4 left-1/4"></div>
+        <div class="absolute w-80 h-80 bg-accent-purple rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000 bottom-1/4 right-1/4"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-slate-300 mb-4">Hello, I'm</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6">
+                <span class="text-accent-teal">Ayush Dobhal</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-8">
+                A passionate <span class="text-accent-purple font-semibold">Software Developer</span> specializing in creating dynamic and user-friendly web experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-24">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">About <span class="text-accent-teal">Me</span></h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3 flex justify-center">
+                <!-- IMPORTANT: Replace this placeholder image with your actual photo URL -->
+                <img src="https://placehold.co/300x300/1E293B/E2E8F0?text=Your+Photo" alt="Ayush Dobhal's Photo" class="rounded-full border-4 border-accent-teal shadow-lg w-64 h-64 object-cover">
+            </div>
+            <div class="md:w-2/3 text-lg leading-relaxed text-slate-300">
+                <p class="mb-4">
+                    Hi, I'm Ayush Dobhal, a passionate and dedicated computer science student with a strong foundation in programming, web development, and software design. My interests lie in building user-centric applications that are both functional and visually appealing.
+                </p>
+                <p class="mb-4">
+                    With hands-on experience in technologies like HTML, CSS, JavaScript, Python, and Django, I constantly strive to enhance my skills through practical projects and continuous learning. I believe in writing clean, efficient code and enjoy solving real-world problems through technology.
+                </p>
+                <p>
+                    Outside of tech, I enjoy graphic designing, reading about emerging technologies, and playing chess, which helps sharpen my problem-solving mindset.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto px-4 py-24">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My <span class="text-accent-purple">Skills</span></h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Skill Card: HTML5 -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">HTML5</h3>
+                <p class="text-slate-400 text-sm">Structured and semantic markup to build clean, responsive web pages.</p>
+            </div>
+            <!-- Skill Card: CSS3 -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">CSS3</h3>
+                <p class="text-slate-400 text-sm">Styling and layout techniques using Flexbox, Grid, and animations.</p>
+            </div>
+            <!-- Skill Card: JavaScript (JS) -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-js text-5xl text-yellow-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">JavaScript (JS)</h3>
+                <p class="text-slate-400 text-sm">Dynamic web behavior, DOM manipulation, and logic implementation.</p>
+            </div>
+            <!-- Skill Card: Object-Oriented Programming (OOPs) -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-cubes text-5xl text-purple-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">OOPs</h3>
+                <p class="text-slate-400 text-sm">Strong understanding of OOP concepts like encapsulation, inheritance, and polymorphism using C++, Python, and JavaScript.</p>
+            </div>
+            <!-- Skill Card: Python -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-python text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Python</h3>
+                <p class="text-slate-400 text-sm">Versatile scripting and backend development with Django.</p>
+            </div>
+            <!-- Skill Card: C / C++ -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-code text-5xl text-gray-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">C / C++</h3>
+                <p class="text-slate-400 text-sm">Efficient problem-solving and algorithmic programming using procedural and object-oriented paradigms.</p>
+            </div>
+            <!-- Skill Card: Django -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-leaf text-5xl text-green-600 mb-4"></i> <!-- Using leaf as a substitute for Django icon -->
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Django</h3>
+                <p class="text-slate-400 text-sm">Building secure and scalable web applications with a clean MVC structure.</p>
+            </div>
+            <!-- Skill Card: Git & GitHub -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-git-alt text-5xl text-red-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Git & GitHub</h3>
+                <p class="text-slate-400 text-sm">Source control and collaboration with versioned repositories.</p>
+            </div>
+            <!-- Skill Card: MySQL -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-database text-5xl text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">MySQL</h3>
+                <p class="text-slate-400 text-sm">Structured database design and querying with SQL.</p>
+            </div>
+            <!-- Skill Card: PostgreSQL -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-database text-5xl text-indigo-600 mb-4"></i> <!-- Different color for visual distinction -->
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">PostgreSQL</h3>
+                <p class="text-slate-400 text-sm">Working with advanced SQL features in PostgreSQL for data integrity and performance.</p>
+            </div>
+            <!-- Skill Card: MongoDB -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-leaf text-5xl text-green-500 mb-4"></i> <!-- Using leaf as a substitute for MongoDB icon -->
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">MongoDB</h3>
+                <p class="text-slate-400 text-sm">NoSQL database handling unstructured data and flexible schemas.</p>
+            </div>
+            <!-- Skill Card: DBMS -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-database text-5xl text-gray-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">DBMS</h3>
+                <p class="text-slate-400 text-sm">Understanding of relational and non-relational database systems, normalization, and transactions.</p>
+            </div>
+            <!-- Skill Card: Bootstrap -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fab fa-bootstrap text-5xl text-purple-600 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Bootstrap</h3>
+                <p class="text-slate-400 text-sm">Fast, responsive UI development using a grid system and components.</p>
+            </div>
+            <!-- Skill Card: Visual Studio Code -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-code text-5xl text-blue-500 mb-4"></i>
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Visual Studio Code</h3>
+                <p class="text-slate-400 text-sm">Preferred code editor with extensions and debugger integration.</p>
+            </div>
+            <!-- Skill Card: Postman -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
+                <i class="fas fa-paper-plane text-5xl text-orange-400 mb-4"></i> <!-- Using paper-plane as a substitute for Postman icon -->
+                <h3 class="text-xl font-semibold text-slate-100 mb-2">Postman</h3>
+                <p class="text-slate-400 text-sm">Testing and interacting with RESTful APIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="container mx-auto px-4 py-24">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My <span class="text-accent-teal">Experience</span></h2>
+        <div class="relative pl-8 md:pl-20 border-l-4 border-slate-700">
+            <!-- Experience Item: BCA Student -->
+            <div class="mb-12 relative">
+                <div class="absolute -left-6 md:-left-10 w-4 h-4 bg-accent-purple rounded-full mt-2 border-2 border-slate-700"></div>
+                <h3 class="text-2xl font-bold text-slate-100 mb-2">BCA Student</h3>
+                <p class="text-lg text-slate-300 mb-1">Graphic Era (Deemed to be University) | 2023 – Present</p>
+                <ul class="list-disc list-inside text-slate-400 space-y-2">
+                    <li>Currently pursuing Bachelor of Computer Applications with a focus on programming, databases, and web development.</li>
+                    <li>Completed academic mini-projects including:</li>
+                    <li>"VibeLink" – A social networking prototype featuring a responsive chat interface and real-time friend suggestions.</li>
+                </ul>
+            </div>
+            <!-- Add more experience items as needed -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto px-4 py-24">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My Recent <span class="text-accent-teal">Projects</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Project Card 1: VibeLink -->
+            <div class="project-card bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-slate-700">
+                <img src="https://placehold.co/600x400/1E293B/E2E8F0?text=VibeLink+Logo" alt="VibeLink Project Logo" class="w-full h-56 object-contain p-4 bg-slate-900">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-slate-100 mb-2">VibeLink</h3>
+                    <p class="text-slate-400 mb-4">
+                        A social networking platform prototype with real-time friend suggestions and a built-in chat feature designed with a modern UI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">CSS</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">SQLite</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="btn-primary text-sm cursor-not-allowed opacity-70">Live Demo (Coming Soon)</a>
+                        <a href="https://github.com/DeTraRoX/vibelink_project/tree/master" target="_blank" class="text-slate-400 hover:text-accent-teal transition-colors duration-300">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-4 py-24 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-slate-100">Get In <span class="text-accent-purple">Touch</span></h2>
+        <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Have a project in mind or just want to say hello? Feel free to reach out! I'm always open to new opportunities and collaborations.
+        </p>
+        <div class="flex flex-col items-center space-y-6">
+            <a href="mailto:ayushdobhal850@gmail.com" class="btn-primary text-lg flex items-center gap-2">
+                <i class="fas fa-envelope"></i> ayushdobhal850@gmail.com
+            </a>
+            <div class="flex space-x-6 text-3xl">
+                <a href="https://www.linkedin.com/in/ayush-dobhal-562a782b3/" target="_blank" class="text-slate-400 hover:text-blue-500 transition-colors duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/DeTraRoX" target="_blank" class="text-slate-400 hover:text-slate-200 transition-colors duration-300" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/DeTraRoX" target="_blank" class="text-slate-400 hover:text-blue-400 transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 text-center text-slate-400 text-sm">
+        <p>&copy; 2025 Ayush Dobhal. All rights reserved.</p>
+        <p>Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+                if (mobileMenuOverlay.classList.contains('active')) {
+                    mobileMenuOverlay.classList.remove('active');
+                }
+            });
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active');
+            });
+        });
+
+        // Optional: Add a subtle animation to elements on scroll (Intersection Observer)
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // Trigger when 15% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up'); // Add a class for animation
+                } else {
+                    // Optional: remove class if you want animation to repeat on scroll up
+                    // entry.target.classList.remove('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out'); // Initial hidden state
+            observer.observe(section);
+        });
+
+        // Define the fade-in-up animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .fade-in-up {
+                animation: fadeInUp 0.7s ease-out forwards;
+            }
+
+            /* Blob animation for home section */
+            @keyframes blob {
+                0% {
+                    transform: translate(0px, 0px) scale(1);
+                }
+                33% {
+                    transform: translate(30px, -50px) scale(1.1);
+                }
+                66% {
+                    transform: translate(-20px, 20px) scale(0.9);
+                }
+                100% {
+                    transform: translate(0px, 0px) scale(1);
+                }
+            }
+            .animate-blob {
+                animation: blob 7s infinite;
+            }
+            .animation-delay-2000 {
+                animation-delay: 2s;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
