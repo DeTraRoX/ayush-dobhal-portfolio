@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayush Dobhal - Portfolio</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter for general text, and a more display-oriented font for headings if desired -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Custom CSS for vibrant colors, aesthetic touches, and button effects */
@@ -122,7 +119,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
     <header class="bg-slate-900 bg-opacity-90 backdrop-blur-sm fixed w-full z-50 shadow-lg">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#home" class="text-2xl font-extrabold text-accent-teal">AyushDobhal.dev</a>
@@ -134,14 +130,12 @@
                 <a href="#projects" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Projects</a>
                 <a href="#contact" class="nav-link text-lg font-medium text-slate-200 hover:text-accent-teal">Contact</a>
             </div>
-            <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden text-slate-200 text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </header>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-slate-800 z-50 shadow-xl md:hidden flex flex-col items-center pt-20 space-y-6">
         <button id="close-mobile-menu" class="absolute top-4 right-4 text-slate-200 text-3xl focus:outline-none">
             <i class="fas fa-times"></i>
@@ -154,9 +148,7 @@
         <a href="#contact" class="mobile-nav-link text-2xl font-medium text-slate-200 hover:text-accent-teal" data-section="contact">Contact</a>
     </div>
 
-    <!-- Home Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden">
-        <!-- Background gradient/blob for aesthetic -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 opacity-70"></div>
         <div class="absolute w-80 h-80 bg-accent-teal rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob top-1/4 left-1/4"></div>
         <div class="absolute w-80 h-80 bg-accent-purple rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000 bottom-1/4 right-1/4"></div>
@@ -176,13 +168,11 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="container mx-auto px-4 py-24">
         <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">About <span class="text-accent-teal">Me</span></h2>
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/3 flex justify-center">
-                <!-- IMPORTANT: Replace this placeholder image with your actual photo URL -->
-                <img src="https://raw.githubusercontent.com/DeTraRoX/ayush-dobhal-portfolio/refs/heads/main/images/DeTraRoX.jpg" alt="Ayush Dobhal's Photo" class="rounded-full border-4 border-accent-teal shadow-lg w-64 h-64 object-cover">
+                <img src="https://raw.githubusercontent.com/DeTraRoX/ayush-dobhal-portfolio/main/images/DeTraRoX.jpg" alt="Ayush Dobhal's Photo" class="rounded-full border-4 border-accent-teal shadow-lg w-64 h-64 object-cover">
             </div>
             <div class="md:w-2/3 text-lg leading-relaxed text-slate-300">
                 <p class="mb-4">
@@ -198,108 +188,86 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="container mx-auto px-4 py-24">
         <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My <span class="text-accent-purple">Skills</span></h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <!-- Skill Card: HTML5 -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">HTML5</h3>
                 <p class="text-slate-400 text-sm">Structured and semantic markup to build clean, responsive web pages.</p>
             </div>
-            <!-- Skill Card: CSS3 -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">CSS3</h3>
                 <p class="text-slate-400 text-sm">Styling and layout techniques using Flexbox, Grid, and animations.</p>
             </div>
-            <!-- Skill Card: JavaScript (JS) -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-js text-5xl text-yellow-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">JavaScript (JS)</h3>
                 <p class="text-slate-400 text-sm">Dynamic web behavior, DOM manipulation, and logic implementation.</p>
             </div>
-            <!-- Skill Card: Object-Oriented Programming (OOPs) -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fas fa-cubes text-5xl text-purple-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">OOPs</h3>
                 <p class="text-slate-400 text-sm">Strong understanding of OOP concepts like encapsulation, inheritance, and polymorphism using C++, Python, and JavaScript.</p>
             </div>
-            <!-- Skill Card: Python -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-python text-5xl text-blue-400 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">Python</h3>
                 <p class="text-slate-400 text-sm">Versatile scripting and backend development with Django.</p>
             </div>
-            <!-- Skill Card: C / C++ -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fas fa-code text-5xl text-gray-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">C / C++</h3>
                 <p class="text-slate-400 text-sm">Efficient problem-solving and algorithmic programming using procedural and object-oriented paradigms.</p>
             </div>
-            <!-- Skill Card: Django -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
-                <i class="fas fa-leaf text-5xl text-green-600 mb-4"></i> <!-- Using leaf as a substitute for Django icon -->
-                <h3 class="text-xl font-semibold text-slate-100 mb-2">Django</h3>
+                <i class="fas fa-leaf text-5xl text-green-600 mb-4"></i> <h3 class="text-xl font-semibold text-slate-100 mb-2">Django</h3>
                 <p class="text-slate-400 text-sm">Building secure and scalable web applications with a clean MVC structure.</p>
             </div>
-            <!-- Skill Card: Git & GitHub -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-git-alt text-5xl text-red-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">Git & GitHub</h3>
                 <p class="text-slate-400 text-sm">Source control and collaboration with versioned repositories.</p>
             </div>
-            <!-- Skill Card: MySQL -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fas fa-database text-5xl text-blue-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">MySQL</h3>
                 <p class="text-slate-400 text-sm">Structured database design and querying with SQL.</p>
             </div>
-            <!-- Skill Card: PostgreSQL -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
-                <i class="fas fa-database text-5xl text-indigo-600 mb-4"></i> <!-- Different color for visual distinction -->
-                <h3 class="text-xl font-semibold text-slate-100 mb-2">PostgreSQL</h3>
+                <i class="fas fa-database text-5xl text-indigo-600 mb-4"></i> <h3 class="text-xl font-semibold text-slate-100 mb-2">PostgreSQL</h3>
                 <p class="text-slate-400 text-sm">Working with advanced SQL features in PostgreSQL for data integrity and performance.</p>
             </div>
-            <!-- Skill Card: MongoDB -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
-                <i class="fas fa-leaf text-5xl text-green-500 mb-4"></i> <!-- Using leaf as a substitute for MongoDB icon -->
-                <h3 class="text-xl font-semibold text-slate-100 mb-2">MongoDB</h3>
+                <i class="fas fa-leaf text-5xl text-green-500 mb-4"></i> <h3 class="text-xl font-semibold text-slate-100 mb-2">MongoDB</h3>
                 <p class="text-slate-400 text-sm">NoSQL database handling unstructured data and flexible schemas.</p>
             </div>
-            <!-- Skill Card: DBMS -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fas fa-database text-5xl text-gray-400 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">DBMS</h3>
                 <p class="text-slate-400 text-sm">Understanding of relational and non-relational database systems, normalization, and transactions.</p>
             </div>
-            <!-- Skill Card: Bootstrap -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fab fa-bootstrap text-5xl text-purple-600 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">Bootstrap</h3>
                 <p class="text-slate-400 text-sm">Fast, responsive UI development using a grid system and components.</p>
             </div>
-            <!-- Skill Card: Visual Studio Code -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
                 <i class="fas fa-code text-5xl text-blue-500 mb-4"></i>
                 <h3 class="text-xl font-semibold text-slate-100 mb-2">Visual Studio Code</h3>
                 <p class="text-slate-400 text-sm">Preferred code editor with extensions and debugger integration.</p>
             </div>
-            <!-- Skill Card: Postman -->
             <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-slate-700 hover:border-accent-teal transition-all duration-300">
-                <i class="fas fa-paper-plane text-5xl text-orange-400 mb-4"></i> <!-- Using paper-plane as a substitute for Postman icon -->
-                <h3 class="text-xl font-semibold text-slate-100 mb-2">Postman</h3>
+                <i class="fas fa-paper-plane text-5xl text-orange-400 mb-4"></i> <h3 class="text-xl font-semibold text-slate-100 mb-2">Postman</h3>
                 <p class="text-slate-400 text-sm">Testing and interacting with RESTful APIs.</p>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="container mx-auto px-4 py-24">
         <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My <span class="text-accent-teal">Experience</span></h2>
         <div class="relative pl-8 md:pl-20 border-l-4 border-slate-700">
-            <!-- Experience Item: BCA Student -->
             <div class="mb-12 relative">
                 <div class="absolute -left-6 md:-left-10 w-4 h-4 bg-accent-purple rounded-full mt-2 border-2 border-slate-700"></div>
                 <h3 class="text-2xl font-bold text-slate-100 mb-2">BCA Student</h3>
@@ -310,17 +278,14 @@
                     <li>"VibeLink" – A social networking prototype featuring a responsive chat interface and real-time friend suggestions.</li>
                 </ul>
             </div>
-            <!-- Add more experience items as needed -->
-        </div>
+            </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="container mx-auto px-4 py-24">
         <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-slate-100">My Recent <span class="text-accent-teal">Projects</span></h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Project Card 1: VibeLink -->
             <div class="project-card bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-slate-700">
-                <img src="https://raw.githubusercontent.com/DeTraRoX/ayush-dobhal-portfolio/refs/heads/main/images/small_logo.png" alt="VibeLink Project Logo" class="w-full h-56 object-contain p-4 bg-slate-900">
+                <img src="https://raw.githubusercontent.com/DeTraRoX/ayush-dobhal-portfolio/main/images/small_logo.png" alt="VibeLink Project Logo" class="w-full h-56 object-contain p-4 bg-slate-900">
                 <div class="p-6">
                     <h3 class="text-2xl font-bold text-slate-100 mb-2">VibeLink</h3>
                     <p class="text-slate-400 mb-4">
@@ -341,11 +306,34 @@
                     </div>
                 </div>
             </div>
-            <!-- Add more project cards as needed -->
-        </div>
+
+            <div class="project-card bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-slate-700">
+                <img src="https://raw.githubusercontent.com/DeTraRoX/ayush-dobhal-portfolio/8f947ac4797baa9e7eacd797fe22186682dedf9b/images/WhatsApp_Image_2025-08-22_at_13.53.17_3ac048e4-removebg-preview.png" alt="SmartCare Hospital Logo" class="w-full h-56 object-contain p-4 bg-slate-900">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-slate-100 mb-2">SmartCare Hospital</h3>
+                    <p class="text-slate-400 mb-4">
+                        A real-time, full-stack web application designed for the dynamic monitoring and management of critical hospital resources.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">FastAPI</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">SQLModel</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">WebSockets</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">HTML</span>
+                        <span class="bg-slate-700 text-slate-300 text-sm px-3 py-1 rounded-full">CSS</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="#" class="btn-primary text-sm cursor-not-allowed opacity-70">Live Demo (Coming Soon)</a>
+                        <a href="https://github.com/DeTraRoX/Hospital-Resource-Allocation-System" target="_blank" class="text-slate-400 hover:text-accent-teal transition-colors duration-300">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="container mx-auto px-4 py-24 text-center">
         <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-slate-100">Get In <span class="text-accent-purple">Touch</span></h2>
         <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
@@ -363,7 +351,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 py-8 text-center text-slate-400 text-sm">
         <p>&copy; 2025 Ayush Dobhal. All rights reserved.</p>
         <p>Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
