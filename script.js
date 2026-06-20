@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < cellCount; i++) {
             const cell = document.createElement('div');
             
-            // Randomly weight commit activity levels to reflect ~84 annual contributions
+            // Randomly weight commit activity levels to reflect ~90 annual contributions
             const rand = Math.random() * 100;
             let levelClass = 'level-0';
             
