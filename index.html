@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ayush Dobhal - Full Stack Developer Portfolio. Custom MERN Stack, Python Django, Flask & FastAPI Developer.">
+    <title>Ayush Dobhal | Full Stack Developer</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon Developer Logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Digital Cursor -->
+    <div id="custom-cursor-dot"></div>
+    <div id="custom-cursor-outline"></div>
+
+    <!-- Interactive Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="app-container">
+        <!-- Header / Navigation -->
+        <header id="header">
+            <div class="nav-container">
+                <a href="#home" class="logo">
+                    <span>&lt;</span>Ayush<span>/&gt;</span>
+                </a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Academic Goals</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-btn" id="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <span class="hero-welcome">Welcome to my space</span>
+                <h1 class="hero-name">Hi, I'm <span>Ayush Dobhal</span></h1>
+                <div class="hero-title-container">
+                    <span>I am a </span>
+                    <span class="typed-text"></span>
+                    <span class="cursor"></span>
+                </div>
+                <p class="hero-description">
+                    Full Stack Developer specializing in building high-performance web applications using the MERN stack, Django, Flask, and FastAPI. Passionate about solving complex algorithms and optimizing database structures.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/DeTraRoX" target="_blank" aria-label="GitHub" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-dobhal-562a782b3/" target="_blank" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ayush_0548?igsh=MWttMWJtcHViZ2dlaQ==" target="_blank" aria-label="Instagram" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:ayushdobhal850@gmail.com" aria-label="Email" class="social-icon">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="avatar-wrapper animate-glow">
+                    <img src="assets/profile.png" alt="Ayush Dobhal Developer Portrait" class="avatar-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-info reveal">
+                    <p class="about-highlight">
+                        I am currently pursuing my Bachelors of Computer Application (BCA) at Graphic Era Deemed to be University (Batch: 2024-2027).
+                    </p>
+                    <p>
+                        Through structured learning and self-driven challenges, I have developed a strong foundation in backend frameworks, object-oriented systems, and dynamic frontend components. I enjoy writing clean, scalable code and designing responsive interfaces that users love.
+                    </p>
+                    <p>
+                        Beyond traditional web design, I actively practice data structures and algorithms. I have solved 350+ questions on LeetCode, showcasing a dedicated mindset towards debugging, problem-solving, and code performance.
+                    </p>
+                    <div class="education-box">
+                        <h3 class="edu-title">Bachelors of Computer Application (BCA)</h3>
+                        <p class="edu-subtitle">Graphic Era Deemed to be University</p>
+                        <span class="edu-duration"><i class="far fa-calendar-alt"></i> 2024 - 2027</span>
+                    </div>
+                <div class="about-stats reveal">
+                    <!-- Detailed LeetCode Dashboard -->
+                    <div class="stat-card leetcode-dashboard">
+                        <div class="leetcode-header">
+                            <span class="leetcode-title"><i class="fas fa-laptop-code"></i> LeetCode Analytics</span>
+                            <div class="stat-number" id="leetcode-count" data-target="374">0</div>
+                            <span class="stat-label">Total Questions Solved</span>
+                        </div>
+                        <div class="leetcode-bars">
+                            <div class="lc-bar-group">
+                                <div class="lc-bar-labels">
+                                    <span class="lc-difficulty easy"><i class="fas fa-dot-circle"></i> Easy</span>
+                                    <span class="lc-count">120 Solved</span>
+                                </div>
+                                <div class="lc-bar-container">
+                                    <div class="lc-bar-progress easy-bar" style="width: 0%;" data-width="32%"></div>
+                                </div>
+                            </div>
+                            <div class="lc-bar-group">
+                                <div class="lc-bar-labels">
+                                    <span class="lc-difficulty medium"><i class="fas fa-dot-circle"></i> Medium</span>
+                                    <span class="lc-count">186 Solved</span>
+                                </div>
+                                <div class="lc-bar-container">
+                                    <div class="lc-bar-progress medium-bar" style="width: 0%;" data-width="50%"></div>
+                                </div>
+                            </div>
+                            <div class="lc-bar-group">
+                                <div class="lc-bar-labels">
+                                    <span class="lc-difficulty hard"><i class="fas fa-dot-circle"></i> Hard</span>
+                                    <span class="lc-count">68 Solved</span>
+                                </div>
+                                <div class="lc-bar-container">
+                                    <div class="lc-bar-progress hard-bar" style="width: 0%;" data-width="18%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-number" id="project-count" data-target="5">0</div>
+                        <div class="stat-label">Production Projects Built</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Activity Grid section -->
+            <div class="github-activity reveal">
+                <h3 class="git-activity-title"><i class="fab fa-github"></i> GitHub Activity Map</h3>
+                <div class="git-grid-container">
+                    <div class="git-stats-summary">
+                        <div class="git-stat-box">
+                            <span class="git-stat-val">84</span>
+                            <span class="git-stat-lbl">Contributions last year</span>
+                        </div>
+                        <div class="git-stat-box">
+                            <span class="git-stat-val">14</span>
+                            <span class="git-stat-lbl">Public Repositories</span>
+                        </div>
+                        <div class="git-stat-box">
+                            <span class="git-stat-val">69</span>
+                            <span class="git-stat-lbl">Total Commits</span>
+                        </div>
+                    </div>
+                    <div class="git-commit-map" id="git-commit-map">
+                        <!-- Commit map cells generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Technical <span>Skills</span></h2>
+            <div class="skills-container">
+                <!-- Languages Category -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Core Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" style="--skill-color: #f0db4f; --skill-glow: rgba(240, 219, 79, 0.25);">
+                            <i class="devicon-javascript-plain icon-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #3776ab; --skill-glow: rgba(55, 118, 171, 0.25);">
+                            <i class="devicon-python-plain icon-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #00599c; --skill-glow: rgba(0, 89, 156, 0.25);">
+                            <i class="devicon-cplusplus-plain icon-cpp"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #a8b9cc; --skill-glow: rgba(168, 185, 204, 0.25);">
+                            <i class="devicon-c-plain icon-cpp"></i>
+                            <span>C Language</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #e34c26; --skill-glow: rgba(227, 76, 38, 0.25);">
+                            <i class="devicon-html5-plain icon-html"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #1572b6; --skill-glow: rgba(21, 114, 182, 0.25);">
+                            <i class="devicon-css3-plain icon-css"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development Frameworks -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Frameworks & Runtimes</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" style="--skill-color: #61dafb; --skill-glow: rgba(97, 218, 251, 0.25);">
+                            <i class="devicon-mongodb-plain icon-mongodb"></i>
+                            <span>MERN Stack</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #092e20; --skill-glow: rgba(9, 46, 32, 0.25);">
+                            <i class="devicon-django-plain icon-django"></i>
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #a8a8a8; --skill-glow: rgba(168, 168, 168, 0.25);">
+                            <i class="devicon-flask-original icon-fastapi"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #009688; --skill-glow: rgba(0, 150, 136, 0.25);">
+                            <i class="devicon-fastapi-plain icon-fastapi"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #38bdf8; --skill-glow: rgba(56, 189, 248, 0.25);">
+                            <i class="devicon-tailwindcss-plain icon-tailwind"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #7952b3; --skill-glow: rgba(121, 82, 179, 0.25);">
+                            <i class="devicon-bootstrap-plain icon-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skills-category reveal">
+                    <h3 class="category-title"><i class="fas fa-toolbox"></i> Databases & Developer Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" style="--skill-color: #4479a1; --skill-glow: rgba(68, 121, 161, 0.25);">
+                            <i class="devicon-mysql-plain icon-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #336791; --skill-glow: rgba(51, 103, 145, 0.25);">
+                            <i class="devicon-postgresql-plain icon-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #47a248; --skill-glow: rgba(71, 162, 72, 0.25);">
+                            <i class="devicon-mongodb-plain icon-mongodb"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #f05032; --skill-glow: rgba(240, 80, 50, 0.25);">
+                            <i class="devicon-git-plain icon-git"></i>
+                            <span>Git Versioning</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #ffffff; --skill-glow: rgba(255, 255, 255, 0.15);">
+                            <i class="devicon-github-original icon-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #007acc; --skill-glow: rgba(0, 122, 204, 0.25);">
+                            <i class="devicon-vscode-plain icon-vscode"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Featured <span>Projects</span></h2>
+            <div class="projects-grid">
+                <!-- Project 1: Sketchforge -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/sketchforge_logo.png" alt="Sketchforge Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sketchforge</h3>
+                        <p class="project-desc">
+                            An advanced digital collaborative canvas and diagramming workspace designed for remote teams to sketch, design, and share flowcharts and illustrations in real-time.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Built vector drawing canvas utilizing HTML5 Canvas API and JavaScript coordinate logic.</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated real-time room sharing and collaborative sketching using WebSockets.</li>
+                            <li><i class="fas fa-check-circle"></i> Leveraged Django backend to store user drawings and room configurations securely.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5 Canvas</span>
+                            <span class="tag">WebSockets</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/SketchForge" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Finora -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/finora_logo.png" alt="Finora Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Finora</h3>
+                        <p class="project-desc">
+                            A smart, automated personal finance tracker and budgeting solution equipped with graphical summaries, monthly projections, and recurring bill notifications.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Designed PostgreSQL relational database schema for transaction logs and budgets.</li>
+                            <li><i class="fas fa-check-circle"></i> Built REST API endpoints with Python Flask and JWT authorization tokens.</li>
+                            <li><i class="fas fa-check-circle"></i> Developed spending categorization charts dynamically using ChartJS.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">JS Charting</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/Finora" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: IntervAI -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/intervai_logo.png" alt="IntervAI Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">IntervAI</h3>
+                        <p class="project-desc">
+                            An AI-driven mock interview environment featuring custom coding pads, automated resume scanners, AI speech-to-text integration, and real-time response grading.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Crafted automated resume scanning and grading engine using OpenAI APIs.</li>
+                            <li><i class="fas fa-check-circle"></i> Structured MERN API backend with video-room streaming capabilities.</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated speech-to-text parsing to score developer responses in real-time.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">MERN Stack</span>
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/IntervAI" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: DocuSearch -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/docusearch_logo.png" alt="DocuSearch Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">DocuSearch</h3>
+                        <p class="project-desc">
+                            An intelligent document search engine and AI assistant that processes, indexes, and full-text searches local files while enabling direct conversational document RAG chat.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Integrated Elasticsearch/OpenSearch for full-text indexing, fuzzy search, and autocomplete queries.</li>
+                            <li><i class="fas fa-check-circle"></i> Built text extraction pipelines for PDF, DOCX, TXT, and scanned image OCR using Tesseract.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented RAG AI chat, Q&A, and summary generation with Gemini API integrations.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">React/Vite</span>
+                            <span class="tag">Elasticsearch</span>
+                            <span class="tag">Node/Express</span>
+                            <span class="tag">Gemini API</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">AWS S3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/DocuSearch" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: AutoDrive -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/autodrive_logo.png" alt="AutoDrive Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AutoDrive</h3>
+                        <p class="project-desc">
+                            A production-ready full-stack vehicle marketplace featuring real-time dealer messaging, payment-backed featured boosts, and smart listing categorizations.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Built Next.js 14 App Router marketplace leveraging Server-Side Rendering (SSR) and dynamic layouts.</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated Socket.IO for real-time dealer chat, typing indicators, and seen tracking statuses.</li>
+                            <li><i class="fas fa-check-circle"></i> Structured secure credentials & Google OAuth using NextAuth, paired with PostgreSQL and Prisma.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Next.js 14</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Prisma ORM</span>
+                            <span class="tag">NextAuth.js</span>
+                            <span class="tag">Socket.IO</span>
+                            <span class="tag">Razorpay</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/car-dealership" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Milestones Section -->
+        <section id="certifications">
+            <h2 class="section-title">Academic <span>Badges</span> & Goals</h2>
+            <div class="certifications-grid">
+                <!-- Academic Badge 1 -->
+                <div class="cert-card reveal">
+                    <span class="cert-badge-type academic">Milestone</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">BCA Core Coursework: Specialized in C++ implementation of Trees, Graphs, Sorting, Hash Maps, and search algorithms.</p>
+                        <span class="status-tag academic">Verified Subject Grade A+</span>
+                    </div>
+                </div>
+
+                <!-- Academic Badge 2 -->
+                <div class="cert-card reveal">
+                    <span class="cert-badge-type academic">Milestone</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>DBMS & Database Architectures</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">BCA Core Coursework: Relational database design, normalization keys, indexing optimizations, and query compilation.</p>
+                        <span class="status-tag academic">Verified Subject Grade A+</span>
+                    </div>
+                </div>
+
+                <!-- Academic Badge 3 -->
+                <div class="cert-card reveal">
+                    <span class="cert-badge-type academic">Milestone</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Object-Oriented Programming (OOPs)</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">BCA Curriculum: Encapsulation, inheritance, polymorphism, templates, and memory-safe design principles in C++.</p>
+                        <span class="status-tag academic">Verified Subject Grade A+</span>
+                    </div>
+                </div>
+
+                <!-- Academic Badge 4 -->
+                <div class="cert-card reveal">
+                    <span class="cert-badge-type academic">Milestone</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Operating Systems & Linux</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">BCA Core Coursework: Process scheduling, memory virtualization, system calls, page faults, and shell scripts.</p>
+                        <span class="status-tag academic">Verified Subject Grade A+</span>
+                    </div>
+                </div>
+
+                <!-- Goal Badge 5 (In-Progress Goal) -->
+                <div class="cert-card reveal goal-card">
+                    <span class="cert-badge-type goal">Goal</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>9.0+ CGPA Academic Goal</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">Academic excellence target: Maintain a CGPA of 9.0 or above across all BCA semesters through high performance in evaluations and exams.</p>
+                        <span class="status-tag in-progress"><i class="fas fa-spinner fa-spin"></i> In Progress (Active CGPA Target)</span>
+                    </div>
+                </div>
+
+                <!-- Goal Badge 6 (In-Progress Goal) -->
+                <div class="cert-card reveal goal-card">
+                    <span class="cert-badge-type goal">Goal</span>
+                    <div class="cert-icon-wrapper">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="cert-details">
+                        <h3>Full-Stack Capstone Project</h3>
+                        <p class="cert-provider">Graphic Era Deemed to be University</p>
+                        <p class="cert-desc">Final year milestone: Design, build, and deploy an enterprise-grade web application integrating secure APIs, databases, and scaling features.</p>
+                        <span class="status-tag in-progress"><i class="fas fa-spinner fa-spin"></i> In Progress (Design & Architecture)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-intro">
+                        Have a question, want to collaborate, or discuss a full-stack opportunity? Drop a message or reach out through social platforms. I'll get back to you as soon as possible!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:ayushdobhal850@gmail.com" class="contact-detail-card">
+                            <div class="contact-card-icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Me</h4>
+                                <p>ayushdobhal850@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayush-dobhal-562a782b3/" target="_blank" class="contact-detail-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <p>ayush-dobhal</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/DeTraRoX" target="_blank" class="contact-detail-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>GitHub Profile</h4>
+                                <p>DeTraRoX</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container reveal">
+                    <form id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required autocomplete="off">
+                            <label for="name" class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required autocomplete="off">
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 10px;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <span>&lt;</span>Ayush<span>/&gt;</span>
+                </a>
+                <p class="footer-text">&copy; 2026 Ayush Dobhal. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/DeTraRoX" target="_blank" aria-label="GitHub" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayush-dobhal-562a782b3/" target="_blank" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ayush_0548?igsh=MWttMWJtcHViZ2dlaQ==" target="_blank" aria-label="Instagram" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:ayushdobhal850@gmail.com" aria-label="Email" class="social-icon">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
