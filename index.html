@@ -99,7 +99,7 @@
                         Through structured learning and self-driven challenges, I have developed a strong foundation in backend frameworks, object-oriented systems, and dynamic frontend components. I enjoy writing clean, scalable code and designing responsive interfaces that users love.
                     </p>
                     <p>
-                        Beyond traditional web design, I actively practice data structures and algorithms. I have solved 350+ questions on LeetCode, showcasing a dedicated mindset towards debugging, problem-solving, and code performance.
+                        Beyond traditional web design, I actively practice data structures and algorithms. I have solved 500+ questions on LeetCode, showcasing a dedicated mindset towards debugging, problem-solving, and code performance.
                     </p>
                     <div class="education-box">
                         <h3 class="edu-title">Bachelors of Computer Application (BCA)</h3>
@@ -111,23 +111,23 @@
                     <div class="stat-card leetcode-dashboard">
                         <div class="leetcode-header">
                             <span class="leetcode-title"><i class="fas fa-laptop-code"></i> LeetCode Analytics</span>
-                            <div class="stat-number" id="leetcode-count" data-target="504">0</div>
+                            <div class="stat-number" id="leetcode-count" data-target="509">0</div>
                             <span class="stat-label">Total Questions Solved</span>
                         </div>
                         <div class="leetcode-bars">
                             <div class="lc-bar-group">
                                 <div class="lc-bar-labels">
                                     <span class="lc-difficulty easy"><i class="fas fa-dot-circle"></i> Easy</span>
-                                    <span class="lc-count">152 Solved</span>
+                                    <span class="lc-count">153 Solved</span>
                                 </div>
                                 <div class="lc-bar-container">
-                                    <div class="lc-bar-progress easy-bar" style="width: 0%;" data-width="32%"></div>
+                                    <div class="lc-bar-progress easy-bar" style="width: 0%;" data-width="30%"></div>
                                 </div>
                             </div>
                             <div class="lc-bar-group">
                                 <div class="lc-bar-labels">
                                     <span class="lc-difficulty medium"><i class="fas fa-dot-circle"></i> Medium</span>
-                                    <span class="lc-count">250 Solved</span>
+                                    <span class="lc-count">254 Solved</span>
                                 </div>
                                 <div class="lc-bar-container">
                                     <div class="lc-bar-progress medium-bar" style="width: 0%;" data-width="50%"></div>
@@ -139,14 +139,14 @@
                                     <span class="lc-count">102 Solved</span>
                                 </div>
                                 <div class="lc-bar-container">
-                                    <div class="lc-bar-progress hard-bar" style="width: 0%;" data-width="18%"></div>
+                                    <div class="lc-bar-progress hard-bar" style="width: 0%;" data-width="20%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card">
-                        <div class="stat-number" id="project-count" data-target="5">0</div>
+                        <div class="stat-number" id="project-count" data-target="10">0</div>
                         <div class="stat-label">Production Projects Built</div>
                     </div>
                 </div>
@@ -158,15 +158,15 @@
                 <div class="git-grid-container">
                     <div class="git-stats-summary">
                         <div class="git-stat-box">
-                            <span class="git-stat-val">137</span>
+                            <span class="git-stat-val">98</span>
                             <span class="git-stat-lbl">Contributions last year</span>
                         </div>
                         <div class="git-stat-box">
-                            <span class="git-stat-val">19</span>
+                            <span class="git-stat-val">17</span>
                             <span class="git-stat-lbl">Public Repositories</span>
                         </div>
                         <div class="git-stat-box">
-                            <span class="git-stat-val">73</span>
+                            <span class="git-stat-val">119</span>
                             <span class="git-stat-lbl">Total Commits</span>
                         </div>
                     </div>
@@ -196,6 +196,10 @@
                         <div class="skill-card" style="--skill-color: #00599c; --skill-glow: rgba(0, 89, 156, 0.25);">
                             <i class="devicon-cplusplus-plain icon-cpp"></i>
                             <span>C++</span>
+                        </div>
+                        <div class="skill-card" style="--skill-color: #ea2d2e; --skill-glow: rgba(234, 45, 46, 0.25);">
+                            <i class="devicon-java-plain" style="color: #ea2d2e;"></i>
+                            <span>Java</span>
                         </div>
                         <div class="skill-card" style="--skill-color: #a8b9cc; --skill-glow: rgba(168, 185, 204, 0.25);">
                             <i class="devicon-c-plain icon-cpp"></i>
@@ -420,6 +424,158 @@
                         <div class="project-links">
                             <a href="https://github.com/DeTraRoX/car-dealership" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
                             <a href="#" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> Live Demo Soon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Driver Drowsiness AI -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/driver_drowsiness_logo.png" alt="Driver Drowsiness AI Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Driver Drowsiness AI</h3>
+                        <p class="project-desc">
+                            An assistive multimodal computer-vision safety system analyzing synchronized dual-camera feeds (face/head & steering wheel) to evaluate driver drowsiness, distraction, and fatigue in real time.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Extracted 478-point facial landmarks and 21-point hand meshes via MediaPipe for real-time EAR, MAR, and steering wheel ROI tracking.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented solvePnP 3D head pose estimation (Pitch/Yaw/Roll) alongside rolling 60-second PERCLOS heuristics.</li>
+                            <li><i class="fas fa-check-circle"></i> Engineered a weighted temporal fusion engine and 3-tier risk FSM with dual MJPEG streaming and local acoustic alarms.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">MediaPipe</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/driver-drowsiness-ai" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/DeTraRoX/driver-drowsiness-ai" target="_blank" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: RECLAIMX -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/reclaimx_logo.png" alt="RECLAIMX Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">RECLAIMX</h3>
+                        <p class="project-desc">
+                            A web-based campus lost-and-found management platform enabling students and administrators to report, discover, verify, and recover misplaced belongings through an organized workflow.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Engineered a modular MVC architecture using Java 21, Javalin 6.3, and Pebble server-side template rendering.</li>
+                            <li><i class="fas fa-check-circle"></i> Built item reporting with image uploads, categorized browsing, and an ownership claim verification pipeline.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented administrative governance with role management, BCrypt security hashing, and claim review workflows.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Java 21</span>
+                            <span class="tag">Javalin</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Pebble</span>
+                            <span class="tag">Maven</span>
+                            <span class="tag">BCrypt</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/RECLAIMX" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/DeTraRoX/RECLAIMX" target="_blank" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Student Productivity Dashboard -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/studypulse_logo.png" alt="Student Productivity Dashboard Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Student Productivity Dashboard</h3>
+                        <p class="project-desc">
+                            A comprehensive academic productivity and study management workspace featuring priority task tracking, Pomodoro timers, attendance monitoring, and AI-assisted study support.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Integrated OpenAI API (gpt-4o-mini) and pypdf text extraction for automated note summarization and exam countdown planning.</li>
+                            <li><i class="fas fa-check-circle"></i> Developed priority-sorted to-do lists, weekly goals, and an automated Pomodoro focus session timer.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented a lecture attendance tracker with dynamic timetable mapping and 75% university eligibility status calculations.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">pypdf</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">LocalStorage</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/student-productivity-dashboard" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/DeTraRoX/student-productivity-dashboard" target="_blank" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: SmartCare -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/smartcare_logo.png" alt="SmartCare Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">SmartCare</h3>
+                        <p class="project-desc">
+                            A real-time hospital resource allocation and bed telemetry platform coordinating emergency patient admissions, resource assignments, and priority waiting queues.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Built an asynchronous REST and WebSocket API architecture leveraging FastAPI, SQLModel, and PostgreSQL.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented priority-based waiting queues (Critical > Serious > Normal) with automatic resource promotion on discharge.</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated live multi-client WebSocket broadcasting for real-time telemetry updates, active allocations, and Chart.js analytics.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">SQLModel</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Bootstrap 5</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/Hospital-Resource-Allocation-System" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/DeTraRoX/Hospital-Resource-Allocation-System" target="_blank" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> View Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: VibeLink -->
+                <div class="project-card reveal">
+                    <div class="project-visual">
+                        <img src="assets/vibelink_logo.png" alt="VibeLink Logo" class="project-logo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">VibeLink</h3>
+                        <p class="project-desc">
+                            A real-time social networking and discovery platform that algorithmically connects individuals based on shared interests and profile compatibility with integrated instant chat.
+                        </p>
+                        <ul class="project-accomplishments">
+                            <li><i class="fas fa-check-circle"></i> Engineered an interest-matching algorithm to recommend friends with shared hobbies and mutual profile preferences.</li>
+                            <li><i class="fas fa-check-circle"></i> Developed an integrated one-to-one real-time chat interface with active connection management and friend list sidebars.</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented secure session-based authentication and responsive UI components using Django 5.0 and SQLite.</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Django 5.0</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Session Auth</span>
+                            <span class="tag">HTML5/CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/DeTraRoX/vibelink_project" target="_blank" class="project-link github-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/DeTraRoX/vibelink_project" target="_blank" class="project-link demo-btn"><i class="fas fa-external-link-alt"></i> View Demo</a>
                         </div>
                     </div>
                 </div>
